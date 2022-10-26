@@ -9,7 +9,7 @@
     />
     <link rel="icon" type="image/png" href="./images/imagix_logo.png" />
     <link rel="stylesheet" href="style.css" />
-    <title>Imagix magicien à Nantes</title>
+    <title>Contact Imagix magicien à Nantes</title>
   </head>
   <body>
     <video
@@ -21,11 +21,11 @@
       loop
     ></video>
 
-    <div class="page-index-container">
+    <div class="page-container">
       <header>
         <video
-          class="presentation"
-          src="./videos/billet.mp4"
+          class="presentation presentation_contact2"
+          src="./videos/carte_thé.mp4"
           playsinline
           autoplay
           muted
@@ -34,6 +34,7 @@
       </header>
 
       <nav class="navigation">
+        <!-- bouton burger lié avec for et id -->
         <label class="burger" for="hamburger">&#9776;</label>
         <input class="burger2" type="checkbox" id="hamburger" />
         <ul>
@@ -60,38 +61,9 @@
         </ul>
       </nav>
 
-      <div class="index-container">
-        <h1 class="teaser reveal">
-          La magie en vrai... Regardez, ça n'a rien à voir !
-        </h1>
+      <h1 class="titre">Ateliers</h1>
 
-        <div class="parchemin">
-          <p class="olivier">
-            Passionné de magie depuis plus de 20 ans, j’aime participer à
-            l’animation de mariages, d’anniversaires, de départs en retraite, de
-            fêtes diverses… organisées par tous types d’organismes /
-            d’administrations ou encore par des particuliers qui recherchent une
-            touche d’originalité pour leurs évènements. <br /><br />
-
-            La pratique du “Close-Up” ou “Magie rapprochée” favorise
-            l’interaction avec le magicien, le rapport humain, et enfin, les
-            spectateurs peuvent observer la magie à quelques centimètres de
-            leurs yeux…<br /><br />
-
-            J’ai également beaucoup de plaisir à mystifier le public au travers
-            d’effets bluffants nécessitant une petite scène pour accueillir les
-            spectateurs ravis de partager une expérience inédite et qui
-            garderont plein de bons souvenirs… <br /><br />
-
-            Au plaisir de partager ces futurs moments de divertissements
-            magiques avec vous ! <br /><br />
-
-            Magicalement,<br /><br />
-
-            <span class="olivier2">Olivier</span>
-          </p>
-        </div>
-      </div>
+      <p class="atelier-text">Page en construction...</p>
 
       <footer>
         <p class="contact-title">Vous pouvez me contacter :</p>
@@ -109,13 +81,13 @@
                 alt="facebook"
               />
             </a>
-            <!-- <a class="youtube" href="https://www.instagram.com/imagix44/">
+            <a class="youtube" href="https://www.instagram.com/imagix44/">
               <img
                 class="youtubeImage"
                 src="./images/youtube-logo-icone.png"
                 alt="youtube"
               />
-            </a> -->
+            </a>
             <a class="insta" href="https://www.instagram.com/imagix44/">
               <img
                 class="instaImage"
@@ -133,6 +105,37 @@
       </footer>
     </div>
 
-    <script src="projet1.js"></script>
+    <!-- <form id="contactForm" action="submit">
+      <div class="contact_flex">
+        <label class="form_label" for="name">Nom / Prénom :</label>
+        <input class="form_input" type="text" id="name" name="user_name" />
+      </div>
+      <div class="contact_flex">
+        <label class="form_label" for="tel">Téléphone :</label>
+        <input class="form_input" type="tel" id="tel" name="user_tel" />
+      </div>
+      <div class="contact_flex">
+        <label class="form_label" for="mail">e-mail&nbsp;:</label>
+        <input class="form_input" type="email" id="mail" name="user_mail" />
+      </div>
+      <div class="contact_flex">
+        <label class="form_label" for="msg">Message :</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button contact_flex">
+        <label class="form_label" for="submit"
+          >Cliquer pour envoyer le message :</label
+        >
+        <button class="button3" id="submit" type="submit">
+          <img
+            class="button2"
+            src="https://www.gifsanimes.com/data/media/1334/tour-de-magie-image-animee-0015.gif"
+            alt="image_chapeau"
+          />
+        </button>
+      </div>
+    </form> -->
+
+    <script src="contact.js"></script>
   </body>
 </html>

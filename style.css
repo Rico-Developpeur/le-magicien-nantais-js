@@ -1,4 +1,3 @@
-/* Reset */
 *,
 html,
 body {
@@ -25,6 +24,24 @@ body {
   left: 0;
 }
 
+.page-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.page-index-container {
+  width: 100vw;
+  height: 130%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -32,25 +49,17 @@ header {
   max-height: 450px;
 }
 
-/* Position premier plan */
 .presentation {
-  position: relative;
   object-fit: fill;
   width: 100vw;
   height: 450px;
 }
 
 .presentation_contact2 {
-  position: relative;
   object-fit: fill;
   width: 100vw;
   height: 506px;
   margin-top: -56px;
-}
-
-/* position premier plan container */
-.navigation {
-  position: relative;
 }
 
 label,
@@ -67,19 +76,24 @@ ul {
   padding: 0px 70px;
   border-top: 2px solid red;
   border-bottom: 2px solid red;
-  font-family: "Quite Magical", sans-serif;
-  font-size: 35px;
+  font-family: "Goudy Old Style", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 li,
-a {
-  margin-bottom: -30px;
+.logoA,
+.accueilA,
+.prestaA,
+.spectA,
+.atelierA,
+.galerieA {
+  margin-bottom: -22px;
   padding-top: 60px;
   color: red;
   text-decoration: none;
 }
 
-/* transition du menu */
 li {
   transition-property: transform;
   transition-duration: 600ms;
@@ -93,7 +107,6 @@ li:hover {
   margin-top: -10px;
 }
 
-/* image du logo */
 .imagix {
   width: 60px;
   height: 60px;
@@ -104,49 +117,141 @@ li:hover {
 .accueil,
 .presta,
 .spect,
-.contact,
 .galerie,
 .atelier {
   text-align: center;
 }
 
+.index-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
 .teaser {
-  position: relative;
   font-family: "Goudy Old Style", sans-serif;
-  padding-top: 20px;
   text-align: center;
   color: rgb(199, 199, 76);
   font-size: 50px;
-  margin: 100px 0px;
-}
-
-.intro {
-  position: absolute;
 }
 
 .parchemin {
-  width: 100vw;
-  height: 900px;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 800px;
+  background-image: url("./images/parchemin.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 100px;
 }
 
 .olivier {
-  position: absolute;
   font-family: "Quite Magical", sans-serif;
-  font-size: 27px;
+  width: 65%;
+  font-size: 25px;
   color: black;
-  margin: 110px 200px;
   line-height: 1.2;
   font-weight: 500;
-  padding-top: 60px;
-  text-indent: 70px;
+  text-indent: 40px;
 }
 
 .olivier2 {
-  margin-left: 700px;
-  font-size: 27px;
-  line-height: 1.2;
+  float: right;
+  padding-right: 30px;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid white;
+  margin-top: 150px;
+}
+
+.contact-title {
+  font-family: "Quite Magical", sans-serif;
+  font-size: 50px;
+  color: white;
   font-weight: 500;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact {
+  font-family: "Goudy Old Style", sans-serif;
+  font-size: 25px;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.reseau-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 2;
+  margin-left: 10%;
+}
+
+.facebookImage {
+  width: 50px;
+}
+
+.facebookImage:hover {
+  transform: scale(1.3);
+}
+
+.youtube {
+  margin-left: 50px;
+}
+
+.youtubeImage {
+  width: 130px;
+}
+
+.youtubeImage:hover {
+  transform: scale(1.3);
+}
+
+.instaImage {
+  width: 150px;
+}
+
+.instaImage:hover {
+  transform: scale(1.3);
+}
+
+.email-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.emailImage {
+  width: 80px;
+}
+
+.contactEmail {
+  font-family: "Goudy Old Style", sans-serif;
+  font-size: 35px;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 .titre {
@@ -360,8 +465,6 @@ h2 {
   margin-bottom: 50px;
 }
 
-/* Translation texte formulaire */
-
 .reveal {
   opacity: 0;
   transform: translateX(-300px);
@@ -373,103 +476,13 @@ h2 {
   transition: 2.5s;
 }
 
-.contactReseau {
-  width: 1300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  font-family: sans-serif;
+.atelier-text {
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
-  margin: 100px 0;
 }
 
-.facebook {
-  width: 450px;
-}
-
-.email {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.insta {
-  width: 250px;
-}
-
-.facebookImage {
-  width: 200px;
-}
-
-.emailImage {
-  width: 350px;
-}
-
-.instaImage {
-  width: 500px;
-}
-
-/* formulaire */
-
-/* form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  color: white;
-  margin: 50px auto;
-  width: 800px;
-  padding: 20px;
-  border: 2px solid red;
-  border-radius: 15px;
-}
-
-.contact_flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form_label {
-  display: flex;
-}
-
-.form_input,
-textarea {
-  font: 20px sans-serif;
-  width: 300px;
-  box-sizing: border-box;
-  border: 3px solid #999;
-}
-
-.form_input {
-  height: 30px;
-}
-
-textarea {
-  vertical-align: top;
-  height: 100px;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-}
-
-.button2 {
-  cursor: pointer;
-  width: 150px;
-} */
-
-/* carrousel */
-
-.container {
+.caroussel-container {
   position: relative;
   width: 320px;
   margin: 100px auto 0 auto;
@@ -585,9 +598,7 @@ span {
 
   .olivier {
     font-size: 30px;
-    margin: 160px 300px;
     line-height: 1.2;
-    padding-top: 0px;
     text-indent: 70px;
   }
 
@@ -597,40 +608,28 @@ span {
     line-height: 1.2;
   }
 
-  .contactReseau {
-    width: 1500 px;
-  }
-
-  .facebook {
-    width: 500px;
-  }
-
-  .email {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .insta {
-    width: 200px;
+  .contact {
+    font-size: 35px;
   }
 
   .facebookImage {
+    width: 100px;
+  }
+
+  .youtubeImage {
     width: 200px;
   }
 
   .emailImage {
-    width: 350px;
+    width: 100px;
   }
 
   .instaImage {
-    width: 500px;
+    width: 300px;
   }
 }
 
 @media screen and (max-width: 1144px) {
-  /* Reset */
   *,
   html,
   body,
@@ -656,36 +655,39 @@ span {
     margin-top: -55px;
   }
 
-  /* position premier plan container */
   .navigation {
     border-top: 3px solid red;
     position: relative;
     z-index: 5;
   }
 
-  /* enleve 3 fois la largeur */
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 35px;
   }
 
-  /* rendre visible ou pas display: none */
   ul {
-    margin-top: -46px;
+    /* position: fixed; */
+    margin-top: -450px;
+    height: 100vh;
+    /* width: 100vw; */
     display: block;
     background-image: none;
     border: none;
     display: none;
-    background-color: gray;
+    background-color: black;
   }
 
-  li {
-    width: 100%;
-    margin: 10px;
+  .accueil,
+  .presta,
+  .spect,
+  .atelier,
+  .galerie {
+    margin: 60px 0;
   }
 
-  /* Plus de transition pour le logo */
   .logo {
     transition-property: none;
   }
@@ -694,7 +696,6 @@ span {
     transform: none;
   }
 
-  /* bouton burger */
   .burger {
     display: inline-block;
     color: #fff;
@@ -704,7 +705,6 @@ span {
     padding: 10px;
   }
 
-  /* montrer et cacher le menu navigation */
   .navigation .burger2:checked ~ ul {
     display: block;
     animation-duration: 1s;
@@ -724,37 +724,38 @@ span {
     }
   }
 
+  .index-container {
+    margin-top: 80px;
+  }
+
   .teaser {
     font-size: 35px;
-    margin-top: 30px;
-    margin-bottom: 40px;
   }
 
   .parchemin {
-    width: 100vw;
-    height: 950px;
-    margin-bottom: 50px;
-    margin-top: 0px;
+    height: 800px;
+    margin-top: 80px;
   }
 
   .olivier {
     font-size: 22px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 120px;
-    margin-left: 140px;
-    padding-top: 160px;
     text-indent: 50px;
     line-height: 1.2;
   }
 
   .olivier2 {
-    margin-left: 600px;
     font-size: 22px;
     line-height: 1.2;
   }
 
-  /* deuxieme plan afin de voir le menu burger */
+  footer {
+    margin-top: 100px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
   .flex_tel {
     position: relative;
     color: white;
@@ -770,30 +771,30 @@ span {
   .contact_p {
     margin-top: -30px;
   }
-  .contactReseau {
-    width: 700px;
+
+  .contact {
+    font-size: 35px;
+    margin-left: 0px;
   }
 
-  .facebook {
-    width: 350px;
-  }
-
-  .email {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .insta {
-    width: 100px;
+  .reseau-container {
+    width: 80%;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 0%;
   }
 
   .facebookImage {
     width: 100px;
   }
 
-  .emailImage {
+  .youtube {
+    margin-left: 170px;
+    display: flex;
+    align-items: center;
+  }
+
+  .youtubeImage {
     width: 250px;
   }
 
@@ -801,9 +802,13 @@ span {
     width: 270px;
   }
 
-  /* form {
-    width: 700px;
-  } */
+  .email-container {
+    margin-right: 0px;
+  }
+
+  .emailImage {
+    width: 150px;
+  }
 
   .button2 {
     width: 130px;
@@ -824,43 +829,60 @@ span {
 }
 
 @media screen and (max-width: 900px) {
-  .olivier2 {
-    margin-left: 430px;
+  ul {
+    margin-top: -450px;
   }
 
-  .contactReseau {
-    width: 650px;
+  .accueil,
+  .presta,
+  .spect,
+  .atelier,
+  .galerie {
+    margin: 40px 0;
   }
 
-  .facebook {
-    width: 200px;
+  .index-container {
+    margin-top: 50px;
   }
 
-  .email {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .insta {
-    width: 100px;
+  .parchemin {
+    height: 870px;
+    margin-top: 60px;
   }
 
   .facebookImage {
     width: 70px;
   }
 
-  .emailImage {
+  .youtube {
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  .youtubeImage {
     width: 200px;
   }
 
   .instaImage {
     width: 200px;
+    margin-left: 50px;
+  }
+
+  .emailImage {
+    width: 120px;
+  }
+
+  footer {
+    margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 732px) {
+  .index-container {
+    margin-top: 30px;
+  }
+
   .titre {
     margin-top: 50px;
   }
@@ -871,86 +893,94 @@ span {
 
   .teaser {
     font-size: 25px;
-    margin-bottom: 20px;
   }
 
   .parchemin {
-    width: 100vw;
-    height: 700px;
-    margin: 0;
+    height: 600px;
+    margin-top: 50px;
   }
 
   .olivier {
     font-size: 16px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 95px;
-    margin-left: 115px;
-    padding-top: 120px;
     text-indent: 30px;
+    width: 70%;
   }
 
   .olivier2 {
-    margin-left: 350px;
     font-size: 16px;
+  }
+
+  .facebookImage {
+    width: 50px;
+  }
+
+  .youtube {
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  .youtubeImage {
+    width: 150px;
+  }
+
+  .instaImage {
+    width: 150px;
+    margin-left: 50px;
+  }
+
+  .emailImage {
+    width: 100px;
   }
 
   .contact_p {
     font-size: 25px;
     margin-top: -110px;
   }
-
-  .contactReseau {
-    width: 550px;
+}
+@media screen and (max-width: 600px) {
+  .index-container {
+    margin-top: 20px;
   }
 
-  .facebook {
-    width: 180px;
+  .parchemin {
+    height: 650px;
+    margin-top: 40px;
   }
 
-  .email {
-    width: 100px;
+  .youtube {
+    margin-left: 100px;
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
-  .insta {
-    width: 120px;
+  .youtubeImage {
+    width: 150px;
   }
 
-  /* form {
-    margin-top: -30px;
-    width: 500px;
-  } */
-
-  /* .form_input,
-  textarea {
-    font: 17px sans-serif;
-  } */
-}
-@media screen and (max-width: 600px) {
-  .parchemin {
-    height: 730px;
+  .instaImage {
+    width: 140px;
+    margin-left: 10px;
   }
 
-  .olivier {
-    font-size: 16px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 80px;
-    margin-left: 95px;
-    padding-top: 115px;
-    text-indent: 30px;
-  }
-
-  .olivier2 {
-    margin-left: 280px;
-    font-size: 16px;
+  .emailImage {
+    width: 100px;
   }
 }
 
 @media screen and (max-width: 500px) {
+  ul {
+    margin-top: -350px;
+  }
+
+  .accueil,
+  .presta,
+  .spect,
+  .atelier,
+  .galerie {
+    margin: 60px 0;
+  }
+
   .presentation {
     height: 300px;
   }
@@ -961,25 +991,53 @@ span {
 
   .teaser {
     font-size: 20px;
-    margin-top: 20px;
   }
 
   .parchemin {
-    height: 810px;
+    height: 700px;
   }
 
   .olivier {
-    font-size: 16px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 75px;
-    margin-left: 90px;
-    padding-top: 130px;
-    text-indent: 30px;
+    width: 65%;
   }
 
-  .olivier2 {
-    margin-left: 240px;
+  .contact-title {
+    font-size: 40px;
+  }
+
+  .contact {
+    margin-bottom: 50px;
+  }
+
+  .reseau-container {
+    flex-direction: column;
+  }
+
+  .facebookImage {
+    width: 50px;
+  }
+
+  .youtube {
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .youtubeImage {
+    width: 150px;
+  }
+
+  .instaImage {
+    width: 150px;
+    margin-left: 00px;
+  }
+
+  .emailImage {
+    width: 100px;
+  }
+
+  footer {
+    margin-top: 40px;
   }
 
   .flex_tel {
@@ -1073,22 +1131,17 @@ span {
 }
 
 @media screen and (max-width: 450px) {
+  .teaser {
+    font-size: 18px;
+  }
+
   .parchemin {
-    height: 890px;
+    height: 800px;
+    margin-top: 10px;
   }
 
-  .olivier {
-    font-size: 16px;
-    margin-right: 60px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 70px;
-    padding-top: 140px;
-    text-indent: 30px;
-  }
-
-  .olivier2 {
-    margin-left: 180px;
+  footer {
+    margin-top: 10px;
   }
 
   .contact_p {
@@ -1134,6 +1187,10 @@ span {
 }
 
 @media screen and (max-width: 365px) {
+  ul {
+    margin-top: -250px;
+  }
+
   .presentation {
     height: 200px;
   }
@@ -1143,7 +1200,7 @@ span {
   }
 
   .teaser {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .flex_tel {
@@ -1154,26 +1211,12 @@ span {
     margin-top: 20px;
   }
 
-  .intro {
-    background-size: 370px 500px;
-    font-weight: 300;
-  }
-
   .parchemin {
-    height: 910px;
+    height: 900px;
   }
 
-  .olivier {
-    font-size: 16px;
-    margin-right: 50px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 55px;
-    padding-top: 140px;
-  }
-
-  .olivier2 {
-    margin-left: 150px;
+  .contact-title {
+    font-size: 35px;
   }
 
   .contact_p {
@@ -1211,13 +1254,5 @@ span {
 @media screen and (max-width: 330px) {
   .parchemin {
     height: 1000px;
-  }
-
-  .olivier {
-    padding-top: 150px;
-  }
-
-  .olivier2 {
-    margin-left: 150px;
   }
 }
