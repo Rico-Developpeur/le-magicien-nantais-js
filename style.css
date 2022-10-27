@@ -1144,6 +1144,14 @@ span {
     margin-top: 10px;
   }
 
+  .emailImage {
+    width: 80px;
+  }
+
+  .contactEmail {
+    font-size: 28px;
+  }
+
   .contact_p {
     font-size: 18px;
     margin-top: -170px;
