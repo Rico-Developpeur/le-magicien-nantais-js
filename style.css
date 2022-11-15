@@ -131,11 +131,15 @@ li:hover {
   margin-top: 100px;
 }
 
-.teaser {
+.teaserTablette {
   font-family: "Goudy Old Style", sans-serif;
   text-align: center;
   color: rgb(199, 199, 76);
   font-size: 50px;
+}
+
+.teaserMobile {
+  display: none;
 }
 
 .parchemin {
@@ -729,7 +733,7 @@ span {
     margin-top: 80px;
   }
 
-  .teaser {
+  .teaserTablette {
     font-size: 35px;
   }
 
@@ -892,7 +896,7 @@ span {
     margin-top: -10px;
   }
 
-  .teaser {
+  .teaserTablette {
     font-size: 25px;
   }
 
@@ -990,7 +994,7 @@ span {
     height: 345px;
   }
 
-  .teaser {
+  .teaserTablette {
     font-size: 20px;
   }
 
@@ -1132,7 +1136,15 @@ span {
 }
 
 @media screen and (max-width: 450px) {
-  .teaser {
+  .teaserTablette {
+    display: none;
+  }
+
+  .teaserMobile {
+    display: unset;
+    font-family: "Goudy Old Style", sans-serif;
+    text-align: center;
+    color: rgb(199, 199, 76);
     font-size: 18px;
   }
 
@@ -1208,7 +1220,7 @@ span {
     height: 245px;
   }
 
-  .teaser {
+  .teaserMobile {
     font-size: 17px;
   }
 
