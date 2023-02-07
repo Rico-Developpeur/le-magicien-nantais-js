@@ -9,9 +9,9 @@
     />
     <link rel="icon" type="image/png" href="./images/imagix_logo.png" />
     <link rel="stylesheet" href="style.css" />
-    <title>Imagix magicien à Nantes</title>
+    <title>Contact Imagix magicien à Nantes</title>
   </head>
-  <body>
+  <body class="body_galerie">
     <video
       class="scintillant"
       src="./videos/scintillant.mp4"
@@ -21,11 +21,11 @@
       loop
     ></video>
 
-    <div class="page-index-container">
+    <div class="page-container">
       <header>
         <video
           class="presentation"
-          src="./videos/billet.mp4"
+          src="./videos/signature.mp4"
           playsinline
           autoplay
           muted
@@ -34,6 +34,7 @@
       </header>
 
       <nav class="navigation">
+        <!-- bouton burger lié avec for et id -->
         <label class="burger" for="hamburger">&#9776;</label>
         <input class="burger2" type="checkbox" id="hamburger" />
         <ul>
@@ -63,41 +64,55 @@
         </ul>
       </nav>
 
-      <div class="index-container">
-        <h1 class="teaserTablette reveal">
-          La magie sous vos yeux... Regardez, ça n'a rien à voir !
-        </h1>
-        <h1 class="teaserMobile reveal">
-          La magie sous vos yeux... <br />Regardez, ça n'a rien à voir !
-        </h1>
+      <h1 class="titre">Contact</h1>
 
-        <div class="parchemin">
-          <p class="olivier">
-            Passionné de magie depuis plus de 20 ans, j’aime participer à
-            l’animation de mariages, d’anniversaires, de départs en retraite, de
-            fêtes diverses… organisées par tous types d’organismes /
-            d’administrations ou encore par des particuliers qui recherchent une
-            touche d’originalité pour leurs évènements. <br /><br />
-
-            La pratique du “Close-Up” ou “Magie rapprochée” favorise
-            l’interaction avec le magicien, le rapport humain, et enfin, les
-            spectateurs peuvent observer la magie à quelques centimètres de
-            leurs yeux…<br /><br />
-
-            J’ai également beaucoup de plaisir à mystifier le public au travers
-            d’effets bluffants nécessitant une petite scène pour accueillir les
-            spectateurs ravis de partager une expérience inédite et qui
-            garderont plein de bons souvenirs… <br /><br />
-
-            Au plaisir de partager ces futurs moments de divertissements
-            magiques avec vous ! <br /><br />
-
-            Magicalement,<br /><br />
-
-            <span class="olivier2">Olivier</span>
-          </p>
-        </div>
+      <div class="contact2 reveal">
+        <p class="contact_p">N'hésitez pas à me contacter :</p>
       </div>
+
+      <form
+        id="contactForm"
+        action="https://formsubmit.co/6a5769b404331c874dbeaafe8c0f43de"
+        method="POST"
+      >
+        <div class="contact_flex">
+          <label class="form_label" for="name">Nom * :</label>
+          <input class="form_input" type="text" id="name" name="Nom" required />
+        </div>
+        <div class="contact_flex">
+          <label class="form_label" for="tel">Téléphone :</label>
+          <input class="form_input" type="tel" id="tel" name="Téléphone" />
+        </div>
+        <div class="contact_flex">
+          <label class="form_label" for="mail">Adresse mail * :</label>
+          <input
+            class="form_input"
+            type="email"
+            id="mail"
+            name="Adresse_mail"
+            required
+          />
+        </div>
+        <div class="contact_flex">
+          <label class="form_label" for="msg">Message * :</label>
+          <textarea id="msg" name="Message" required></textarea>
+        </div>
+        <!-- <input type="hidden" name="_captcha" value="false" /> -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nouveau message site Imagix"
+        />
+        <input type="hidden" name="_template" value="box" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://le-magicien-nantais.fr//thanks.html"
+        />
+        <div class="button contact_flex">
+          <button class="button3" type="submit">ENVOYER</button>
+        </div>
+      </form>
 
       <footer>
         <p class="contact-title">Vous pouvez me contacter :</p>

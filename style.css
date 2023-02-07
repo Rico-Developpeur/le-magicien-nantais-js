@@ -86,6 +86,7 @@ li,
 .accueilA,
 .prestaA,
 .spectA,
+.contactA,
 .atelierA,
 .galerieA {
   margin-bottom: -22px;
@@ -117,6 +118,7 @@ li:hover {
 .accueil,
 .presta,
 .spect,
+.contact,
 .galerie,
 .atelier {
   text-align: center;
@@ -195,7 +197,7 @@ footer {
   align-items: center;
 }
 
-.contact {
+.contact-tel {
   font-family: "Goudy Old Style", sans-serif;
   font-size: 25px;
   color: white;
@@ -244,6 +246,12 @@ footer {
   justify-content: left;
   align-items: center;
   margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.email-container:hover {
+  transform: scale(1.3);
 }
 
 .emailImage {
@@ -487,6 +495,95 @@ h2 {
   text-align: center;
 }
 
+.contact2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  font-family: "Quite Magical", sans-serif;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.contact_p {
+  font-weight: bold;
+  font-family: "Goudy Old Style", sans-serif;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+  margin: 50px auto;
+  width: 800px;
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 15px;
+}
+
+.contact_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Goudy Old Style", sans-serif;
+}
+
+.form_input,
+textarea {
+  font: 20px sans-serif;
+  border-radius: 20px;
+  width: 300px;
+  box-sizing: border-box;
+  border: 3px solid #999;
+  padding-left: 8px;
+}
+
+.form_input {
+  height: 30px;
+}
+
+textarea {
+  vertical-align: top;
+  height: 100px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.button3 {
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  width: 10em;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.button3:hover {
+  background-color: rgb(205, 0, 55);
+  color: white;
+  width: 12em;
+}
+
+.button2 {
+  cursor: pointer;
+  width: 150px;
+}
 .caroussel-container {
   position: relative;
   width: 320px;
@@ -583,6 +680,27 @@ span {
   margin-bottom: 80px;
 }
 
+.thanks-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.title_thanks {
+  font-weight: bold;
+  font-size: 60px;
+  font-family: "Goudy Old Style", sans-serif;
+  margin-bottom: 200px;
+}
+
+.img_thanks {
+  width: 200px;
+}
+
 @media screen and (min-width: 1600px) {
   header {
     max-height: 600px;
@@ -613,7 +731,7 @@ span {
     line-height: 1.2;
   }
 
-  .contact {
+  .contact-tel {
     font-size: 35px;
   }
 
@@ -688,6 +806,7 @@ span {
   .accueil,
   .presta,
   .spect,
+  .contact,
   .atelier,
   .galerie {
     margin: 60px 0;
@@ -774,13 +893,13 @@ span {
   }
 
   .contact_p {
-    margin-top: -30px;
+    font-size: 45px;
   }
 
-  .contact {
+  /* .contact {
     font-size: 35px;
     margin-left: 0px;
-  }
+  } */
 
   .reseau-container {
     width: 80%;
@@ -831,6 +950,11 @@ span {
     margin-top: 500px;
     margin-bottom: 70px;
   }
+
+  .title_thanks {
+    font-size: 45px;
+    margin-bottom: 200px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -841,6 +965,7 @@ span {
   .accueil,
   .presta,
   .spect,
+  .contact,
   .atelier,
   .galerie {
     margin: 40px 0;
@@ -853,6 +978,10 @@ span {
   .parchemin {
     height: 870px;
     margin-top: 60px;
+  }
+
+  form {
+    width: 650px;
   }
 
   .facebookImage {
@@ -880,6 +1009,11 @@ span {
 
   footer {
     margin-top: 60px;
+  }
+
+  .title_thanks {
+    font-size: 40px;
+    margin-bottom: 150px;
   }
 }
 
@@ -915,6 +1049,11 @@ span {
     font-size: 16px;
   }
 
+  form {
+    margin: 20px auto;
+    width: 500px;
+  }
+
   .facebookImage {
     width: 50px;
   }
@@ -939,10 +1078,16 @@ span {
   }
 
   .contact_p {
-    font-size: 25px;
+    font-size: 35px;
     margin-top: -110px;
   }
+
+  .title_thanks {
+    font-size: 30px;
+    margin-bottom: 100px;
+  }
 }
+
 @media screen and (max-width: 600px) {
   .index-container {
     margin-top: 20px;
@@ -951,6 +1096,11 @@ span {
   .parchemin {
     height: 650px;
     margin-top: 40px;
+  }
+
+  form {
+    margin: 0px auto;
+    width: 400px;
   }
 
   .youtube {
@@ -971,6 +1121,16 @@ span {
   .emailImage {
     width: 100px;
   }
+
+  .contact_p {
+    font-size: 30px;
+    margin-top: -110px;
+  }
+
+  .title_thanks {
+    font-size: 25px;
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -981,6 +1141,7 @@ span {
   .accueil,
   .presta,
   .spect,
+  .contact,
   .atelier,
   .galerie {
     margin: 60px 0;
@@ -1010,9 +1171,9 @@ span {
     font-size: 40px;
   }
 
-  .contact {
+  /* .contact {
     margin-bottom: 50px;
-  }
+  } */
 
   .reseau-container {
     flex-direction: column;
@@ -1099,13 +1260,7 @@ span {
     font-size: 28px;
   }
 
-  .contact_p {
-    font-size: 21px;
-    margin-top: -150px;
-  }
-
   form {
-    width: 430px;
     margin-top: -40px;
   }
 
@@ -1166,7 +1321,7 @@ span {
   }
 
   .contact_p {
-    font-size: 18px;
+    font-size: 25px;
     margin-top: -170px;
   }
 
@@ -1179,7 +1334,7 @@ span {
   }
 
   form {
-    width: 360px;
+    width: 320px;
     margin-top: -50px;
   }
 
@@ -1204,6 +1359,11 @@ span {
     height: 150px;
     margin-top: 420px;
     margin-bottom: 40px;
+  }
+
+  .title_thanks {
+    font-size: 20px;
+    margin-bottom: 100px;
   }
 }
 
@@ -1241,7 +1401,7 @@ span {
   }
 
   .contact_p {
-    font-size: 15px;
+    font-size: 22px;
   }
 
   .reveal {
@@ -1269,6 +1429,10 @@ span {
     height: 150px;
     margin-top: 400px;
     margin-bottom: 30px;
+  }
+  .title_thanks {
+    font-size: 18px;
+    margin-bottom: 100px;
   }
 }
 
