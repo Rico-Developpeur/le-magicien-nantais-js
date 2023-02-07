@@ -234,7 +234,7 @@ footer {
 }
 
 .instaImage {
-  width: 150px;
+  width: 130px;
 }
 
 .instaImage:hover {
@@ -245,7 +245,7 @@ footer {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 55px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -263,7 +263,6 @@ footer {
   font-size: 35px;
   color: white;
   font-weight: 500;
-  margin-left: 10px;
 }
 
 .titre {
@@ -809,7 +808,7 @@ span {
   .contact,
   .atelier,
   .galerie {
-    margin: 60px 0;
+    margin: 50px 0;
   }
 
   .logo {
@@ -1138,14 +1137,14 @@ span {
     margin-top: -350px;
   }
 
-  .accueil,
+  /* .accueil,
   .presta,
   .spect,
   .contact,
   .atelier,
   .galerie {
-    margin: 60px 0;
-  }
+    margin: 40px 0;
+  } */
 
   .presentation {
     height: 300px;
@@ -1177,6 +1176,7 @@ span {
 
   .reseau-container {
     flex-direction: column;
+    margin-top: 30px;
   }
 
   .facebookImage {
